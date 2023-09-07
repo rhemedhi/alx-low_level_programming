@@ -8,16 +8,16 @@
 
 int main(void)
 {
-int i;
-float j;
-double z;
+char i;
+int j;
 long int a;
 long long int b;
+float c;
 
-printf("size of int:%u\n", sizeof(i));
-printf("size of float:%u\n", sizeof(j));
-printf("size of double:%u\n", sizeof(z));
-printf("size of long int:%u\n", sizeof(a));
-printf("size of long long int:%u\n", sizeof(b));
+printf("size of a char:%u byte(s)\n", sizeof(i));
+printf("size of an int:%u byte(s)\n", sizeof(j));
+printf("size of a long int:%u byte(s)\n", sizeof(a));
+printf("size of a long long int:%u byte(s)\n", sizeof(b));
+printf("size of a float:%u byte(s)\n", sizeof(c));
 return (0);
 }
