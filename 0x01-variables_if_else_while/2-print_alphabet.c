@@ -1,11 +1,13 @@
 #include <stdio.h>
 
 /**
-* main - alphabet in lowercase, followed by a new line.
-*
-* Description: The main function return lowercase alphabets
-* * Always return(0)
-*/
+ * main - Entry point of the program.
+ *
+ * This function prints the lowercase alphabet from 'a' to 'z' followed by
+ * a new line and returns 0 to indicate successful execution.
+ *
+ * Return: Always 0 (success)
+ */
 
 int main(void)
 {
