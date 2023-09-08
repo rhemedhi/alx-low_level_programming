@@ -15,7 +15,7 @@ int a = '0';
 
 for (a = 0; a < 10; a++)
 {
-printf("%d\n", a);
+printf("%d", a);
 }
 
 return (0);
