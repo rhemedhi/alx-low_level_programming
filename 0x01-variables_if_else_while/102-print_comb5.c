@@ -1,31 +1,27 @@
 #include <stdio.h>
 
 /**
- * main - main - two pairs of numbers that do not repeat
+ * main - Generate pairs of two-digit numbers without repeating digits
  *
- * Return (0)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 int i, j;
 
-for (j = 0; j <= 99; j++)
+for (i = 0; i <= 99; i++)
 {
-for (i = j; i <= 99; i++)
+for (j = i + 1; j <= 99; j++)
 {
 if (i != j)
 {
-putchar(j / 10 + 48);
-putchar(j % 10 + 48);
-putchar(' ');
-putchar(i / 10 + 48);
-putchar(i % 10 + 48);
-}
-if (j * 100 + i != 9899)
+printf("%02d %02d", i, j);
+
+if (i != 98 || j != 99)
 {
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
@@ -33,3 +29,4 @@ putchar('\n');
 
 return (0);
 }
+
