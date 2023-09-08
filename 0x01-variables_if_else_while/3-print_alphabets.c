@@ -15,7 +15,7 @@ int main(void)
 char l = 'a';
 char u = 'A';
 
-while(l <= 'z')
+while (l <= 'z')
 {
 putchar(l);
 l++;
