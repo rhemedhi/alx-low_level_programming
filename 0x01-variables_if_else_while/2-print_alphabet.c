@@ -3,7 +3,8 @@
 /**
 * main - alphabet in lowercase, followed by a new line.
 *
-* Always return(0)
+* Description: The main function return lowercase alphabets
+* * Always return(0)
 */
 
 int main(void)
