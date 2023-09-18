@@ -1,23 +1,23 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_array - print array
- * @dest: character pointer
- * @src: character source
- *
- * Description: copies string pointed to by src
- *
- * Return: return pointer
+ *_strcpy - copy a string to a destination.
+ *@dest: destination of copied string.
+ *@src: source of copied string.
+ *Return: home.
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+	char *home = dest;
 
-	for (i = 0; src[i]; i++)
+	while (*src != '\0')
 	{
-		dest[i] = src[i];
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	dest[i] = src[i];
-	return (dest);
+	*dest = '\0';
+
+	return (home);
 }

@@ -1,24 +1,21 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * puts2 - print characte
- * @str: input string
- *
- * Description: prints character of a string, starting first character
- * Return: Always (0)
+ *puts2 - print every other character.
+ *@str: string argument.
  */
 
 void puts2(char *str)
 {
-	int i;
+	int len = 0;
 
-	while (str[i] != '\0')
+	while (str[len] != '\0')
 	{
-		if (i % 2 == 0)
+		if (len % 2 == 0)
 		{
-			_putchar(str[i]);
+			_putchar(str[len]);
 		}
-		i++;
+		len++;
 	}
 	_putchar('\n');
 }
