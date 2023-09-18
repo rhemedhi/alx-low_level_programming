@@ -6,7 +6,8 @@
  * @src: character source
  *
  * Description: copies string pointed to by src
- * Return: return pointer
+ *
+ * * Return: A pointer to the destination string (dest).
  */
 
 char *_strcpy(char *dest, char *src)
