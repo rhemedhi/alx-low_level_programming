@@ -1,33 +1,46 @@
 #include "main.h"
 
-int _atoi(char *s) {
-    int result = 0;
-    bool isNegative = false;
-    
-    while (*s == ' ') {
-        s++;
-    }
-    
-    if (*s == '-' || *s == '+') {
-        isNegative = (*s == '-');
-        s++;
-    }
-    
-    while (*s >= '0' && *s <= '9') {
-    
-        if (!isNegative && (result > (INT_MAX - (*s - '0')) / 10)) {
-            return INT_MAX; 
-        } else if (isNegative && (result < (INT_MIN + (*s - '0')) / 10)) {
-            return INT_MIN; 
-        }
-        
-        result = result * 10 + (*s - '0');
-        s++;
-    }
-    
-    if (isNegative) {
-        result = -result;
-    }
-    
-    return result;
+/**
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ *
+ * Return: the int converted from the string
+ */
+int _atoi(char *s)
+{
+	int i, d, n, len, f, digit;
+
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	while (i < len && f == 0)
+	{
+		if (s[i] == '-')
+			++d;
+
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			f = 0;
+		}
+		i++;
+	}
+
+	if (f == 0)
+		return (0);
+
+	return (n);
 }
