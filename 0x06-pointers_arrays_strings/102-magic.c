@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+  * print a[2] such that it returns 98 instead of 1024
+  *
+  *
+  * Return: (0)
+  */
+
 int main(void)
 {
 	int n;
