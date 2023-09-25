@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 	{
 		if (*point == c)
 		{
-			return (point);
+		return (point);
 		}
 		point++;
 	}
