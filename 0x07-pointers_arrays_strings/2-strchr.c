@@ -5,7 +5,6 @@
  * @s: subject stirng.
  * @c: character to look for.
  * Return: pointer to first occurence.
- *			NULL if not present.
 */
 
 char *_strchr(char *s, char c)
