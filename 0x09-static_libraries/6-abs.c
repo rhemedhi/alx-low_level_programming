@@ -1,26 +1,28 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- *_abs - prints the absolute value of a number.
- *Return: val when successful.
- *@arg: the type to input.
+ * _abs - value absolute
+ *
+ * @n: The int to print
+ * Return: Always 0.
  */
 
-int _abs(int arg)
+int _abs(int n)
 {
-	if (arg < 0)
+	if (n < 0)
 	{
-		int val = arg * -1;
-
-		return (val);
+		return (n * (-1));
 	}
-	else if (arg > 0)
-	{
-		int val = arg * 1;
 
-		return (val);
-	}
-	else
+	else if (n == 0)
 	{
 		return (0);
 	}
+
+	else
+	{
+		return (n);
+	}
+
 }

@@ -1,21 +1,21 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- *_strlen - grts string length.
- *@s: string argument
- *Return: length.
- *(*s != '\0'): iterate throught each char while it's not null.
- *len: a counter throught the strin array positions/index.
- */
+ * _strlen - Function for counting the length of string
+ * @s: a pointer for counting the strting lenth
+ * Author: Sammykingx
+ * Return: int i
+*/
 
 int _strlen(char *s)
 {
-	int len = 0;
+	int i = 0;
 
-	while (*s != '\0')
+	while (s[i] != '\0')
 	{
-		s++;
-		len++;
+		i++;
 	}
-	return (len);
+
+	return (i);
 }
