@@ -7,7 +7,7 @@
  * @n: number of bytes of st to concant
  *
  * Return: Null if functin faills
- *			or ptr to new allocated string.
+ * or ptr to new allocated string.
 */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
