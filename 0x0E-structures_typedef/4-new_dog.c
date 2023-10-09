@@ -1,48 +1,75 @@
 #include "dog.h"
-#include <stdlib.h>
-#include <stdio.h>
+
 /**
- * new_dog - new dog
- * @name: name's dog
- * @age: age's dog
- * @owner: owner's dog
- * Return: newdog
- */
+ * new_dog - creates new object "dog2"
+ * @name: pointer to name of dog
+ * @age: age property
+ * @owner: pointer to owner property
+ * Return: new object called dog2.
+*/
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	dog_t *dog2;
 
-    int i = 0, j = 0, k;
-    dog_t *doge;
+	dog2 = malloc(sizeof(dog_t));
+	if (dog2 == NULL)
+	{
+		free(dog2);
+		return (NULL);
+	}
+	dog2->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	dog2->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (dog2->name == NULL || dog2->owner == NULL)
+	{
+		free(dog2->name);
+		free(dog2->owner);
+		free(dog2);
+		return (NULL);
+	}
+	dog2->name = _strcpy(dog2->name, name);
+	dog2->age = age;
+	dog2->owner = _strcpy(dog2->owner, owner);
+	return (dog2);
+}
 
-    while (name[i] != '\0')
-        i++;
-    while (owner[j] != '\0')
-        j++;
-    doge = malloc(sizeof(dog_t));
-    if (doge == NULL)
-    {
-        free(doge);
-        return (NULL);
-    }
-    doge->name = malloc(i * sizeof(doge->name));
-    if (doge->name == NULL)
-    {
-        free(doge->name);
-        free(doge);
-        return (NULL);
-    }
-    for (k = 0; k <= i; k++)
-        doge->name[k] = name[k];
-    doge->age = age;
-    doge->owner = malloc(j * sizeof(doge->owner));
-    if (doge->owner == NULL)
-    {
-        free(doge->owner);
-        free(doge->name);
-        free(doge);
-        return (NULL);
-    }
-    for (k = 0; k <= j; k++)
-        doge->owner[k] = owner[k];
-    return (doge);
+/**
+ *_strcpy - copy a string to a destination.
+ *@dest: destination of copied string.
+ *@src: source of copied string.
+ *Return: home.
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	char *home = dest;
+
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+
+	return (home);
+}
+
+/**
+ *_strlen - grts string length.
+ *@s: string argument
+ *Return: length.
+ *(*s != '\0'): iterate throught each char while it's not null.
+ *len: a counter throught the strin array positions/index.
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		s++;
+		len++;
+	}
+	return (len);
 }
