@@ -2,9 +2,7 @@
 
 /**
  * list-len - return number of elements in a linked list_t list.
- *
  * @h: Pointer to linked list node.
- *
  * Return: number j elements in linked list
  */
 
