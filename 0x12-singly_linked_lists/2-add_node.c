@@ -6,7 +6,6 @@
  *@str: pointer to string member
  *Return: address of new element or NULL if failed.
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
