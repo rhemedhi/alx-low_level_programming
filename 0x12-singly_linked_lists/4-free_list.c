@@ -1,20 +1,19 @@
 #include "lists.h"
 
 /**
- * free_list - free list
+ * free_list - fees list
  * @head: pointer to node
- */
+*/
 
-void free_list(list_t *head) 
+void free_list(list_t *head)
 {
-	list_t *lsf
+	list_t *current;
 
-	while (head)
-	{
-		lsf = head->next;
-		free(head->str);
-		free(head);
-		head = lsf;
+		while (head != NULL)
+		{
+			current = head;
+			head = head->next;
+			free(current->str);
+			free(current);
 	}
-	
 }
