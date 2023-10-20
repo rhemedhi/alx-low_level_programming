@@ -19,8 +19,8 @@ size_t print_list(const list_t *h)
 		else
 			printf("[0] (nil)\n");
 
-		countNodes += 1;
 		h = h->next;
+		countNodes++;
 	}
 
 	return (countNodes);
