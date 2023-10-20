@@ -1,20 +1,21 @@
-#include "lists.h"
-
-section .data
-    format db "Hello, Holberton",10,0  ; The format string, with newline character
+extern printf
 
 section .text
-    global main
-
-    extern printf
+global main
 
 main:
-    ; Call printf
-    mov rdi, format
-    call printf
+push rbp
 
-    ; Exit program
-    mov rax, 60         ; syscall number for exit
-    xor rdi, rdi        ; exit status, 0
-    syscall
+mov rdi, fmt
+mov rsi, msg
+mov rax, 0
+call printf
 
+pop rbp
+
+mov rax, 0
+ret
+
+section .data
+msg: db "Hello, Holberton", 0
+fmt: db "%s", 10, 0
