@@ -8,18 +8,17 @@
 
 size_t print_list(const list_t *h)
 {
-	const list_t *cursor = h;
 	size_t countNode = 0;
 
-	while (cursor != NULL)
+	while (h != NULL)
 	{
-		if (cursor->str != NULL)
-			printf("[%d] %s\n", cursor->len, cursor->str);
+		if (h->str != NULL)
+			printf("[%d] %s\n", h->len, h->str);
 		else
 			printf("[0] (nil)\n");
 
 		countNode += 1;
-		cursor = cursor->next;
+		h = h->next;
 	}
 
 	return (countNode);
