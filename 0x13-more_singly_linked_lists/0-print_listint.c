@@ -13,7 +13,7 @@ size_t cnt = 0;
 
 for(; h; h = h->next)
 {
-printf("%d\n", mov->n)
+printf("%d\n", h->n)
 cnt++;
 }
 
