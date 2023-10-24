@@ -8,14 +8,16 @@
  */
 size_t print_listint(const listint_t *h)
 {
-const listint_t *pot = h;
+
 size_t cnt = 0;
 
-while (pot != NULL)
+while (h)
 {
-printf("%d\n", pot->n);
+printf("%d\n", h->n);
 cnt += 1;
-pot = pot->next;
+h = h->next;
 }
+
 return (cnt);
+
 }
