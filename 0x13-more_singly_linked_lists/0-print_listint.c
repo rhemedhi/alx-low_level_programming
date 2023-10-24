@@ -19,4 +19,3 @@ pot = pot->next;
 }
 return (cnt);
 }
-
