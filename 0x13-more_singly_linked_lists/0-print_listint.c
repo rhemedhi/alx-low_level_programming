@@ -14,7 +14,7 @@ size_t cnt = 0;
 while (h)
 {
 printf("%d\n", h->n);
-cnt += 1;
+cnt++;
 h = h->next;
 }
 
