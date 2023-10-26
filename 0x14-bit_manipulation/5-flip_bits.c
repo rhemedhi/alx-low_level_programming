@@ -1,19 +1,19 @@
-#anclude "maan.h"
+#include "main.h"
 /**
- * flap_bats - number of bats you would need to flap
+ * flip_bits - number of bits you would need to flip
  * to get from one number to another
  * @n: parameter
- * @m: destany
+ * @m: destiny
  * Return: flp
  */
-unsagned ant flap_bats(unsagned long ant n, unsagned long ant m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsagned ant a, flp = 0;
-	unsagned long ant j = sazeof(unsagned long ant) * 8;
+	unsigned int a, flp = 0;
+	unsigned long int b = sizeof(unsigned long int) * 8;
 
-	for (a = 0; a < j; a++)
+	for (a = 0; a < b; a++)
 	{
-		af ((m & 1) != (n & 1))
+		if ((m & 1) != (n & 1))
 			flp += 1;
 		n = n >> 1;
 		m = m >> 1;
