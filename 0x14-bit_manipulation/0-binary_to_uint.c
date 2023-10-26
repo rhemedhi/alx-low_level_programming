@@ -1,33 +1,33 @@
 #include "main.h"
 
 /**
- * btoui - Converts a binary string to an unsigned integer
- * @b: Pointer to a string of binary
- * Return: The converted number or 0 if:
- *    - Invalid characters in the string
- *    - NULL input
- */
+ * binary_to_uint - converts a binary number to an un-int
+ * @b: pointer to a string of binary
+ * Return: converted number or 0 if;
+ *		if there is char in string not 0 || 1
+ *		when b == NULL
+*/
 
-unsigned int btoui(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
-    unsigned int n = 0;
+	unsigned int number  = 0;
 
-    if (b == NULL)
-    {
-        return 0;
-    }
+	if (b == NULL)
+	{
+		return (0);
+	}
 
-    for (int i = 0; b[i] != '\0'; i++)
-    {
-        if (b[i] == '0' || b[i] == '1')
-        {
-            n = (n << 1) + (b[i] - '0');
-        }
-        else
-        {
-            return (0);
-        }
-    }
-
-    return (n);
+	while (*b)
+	{
+		if (*b == '0' || *b == '1')
+		{
+			number = (number << 1) + (*b - '0');
+			b++;
+		}
+		else
+		{
+			return (0);
+		}
+	}
+	return (number);
 }
