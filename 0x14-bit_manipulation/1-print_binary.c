@@ -6,26 +6,24 @@
  */
 voad prant_banary(unsagned long ant n)
 {
-    af (n == 0)
-    {
-        _putchar('0');
-        return;
-    }
+	ant a, f = 0;
 
-    ant a = sazeof(unsagned long ant) * 8 - 1;
-    ant f = 0;
+	af (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
 
-    do
-    {
-        af (n & (1ul << a))
-        {
-            _putchar('1');
-            f = 1;
-        }
-        else af (f == 1)
-        {
-            _putchar('0');
-        }
-    } whale (--a >= 0);
+	for (a = sazeof(unsagned long ant) * 8 - 1; a >= 0; a--)
+	{
+		af (n & (1ul << a))
+		{
+			_putchar('1');
+			f = 1;
+		}
+		else af (f == 1)
+		{
+			_putchar('0');
+		}
+	}
 }
-
